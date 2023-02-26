@@ -1,27 +1,24 @@
 import { Suspense, useState } from "react"
 import { Link } from "react-router-dom"
 import { Route, Routes } from "react-router-dom"
-import { Counter } from "./components/Counter"
 import "./styles/index.scss"
-import { AboutPageAsync } from "./pages/AboutPage/AbotPage.async"
-import { MainPageAsync } from "./pages/MainPage/MainPage.async"
-import { useTheme } from "./theme/useTheme"
-import { classNames } from "./utils/classNames/classNames"
+import { classNames } from "shared/lib/classNames/classNames"
+import { useTheme } from "./providers/ThemeProvider"
+import { AboutPage } from "pages/AboutPage"
+import { MainPage } from "pages/MainPage"
 
 export const App = () => {
     const {theme, toggleTheme} = useTheme();
 
     return <div className={classNames('app', {}, [theme])}>
-        <div>Adadw</div>
         <button onClick={toggleTheme}>Change Theme</button>
         <Link to="/">Main page</Link>
         <Link to="/about">About</Link>
             <Suspense fallback={<div>Loading...</div>}>
                 <Routes>
-                    <Route path={'/about'} element={<AboutPageAsync />} />
-                    <Route path={'/'} element={<MainPageAsync />} />
+                    <Route path={'/about'} element={<AboutPage />} />
+                    <Route path={'/'} element={<MainPage />} />
                 </Routes>
             </Suspense>
-        <Counter />
     </div>
 }
