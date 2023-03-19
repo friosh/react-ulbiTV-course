@@ -1,0 +1,7 @@
+{
+    "i18n-ally.localesPaths": [
+        "public/locale",
+        "src/shared/config/i18n"
+    ],
+    "i18n-ally.keystyle": "flat"
+}
