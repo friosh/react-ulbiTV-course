@@ -14,7 +14,7 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button = ({
   className = '', theme = ThemeButton.CLEAR, children, ...otherProps
 }: IButtonProps) => (
-  <button className={classNames(cls.Button, {}, [className, cls[theme]])} {...otherProps}>
+  <button type="button" className={classNames(cls.Button, {}, [className, cls[theme]])} {...otherProps}>
     {children}
   </button>
 );
