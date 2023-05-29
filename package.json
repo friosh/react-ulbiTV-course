@@ -7,7 +7,9 @@
     "build:prod": "npx webpack build --env mode=production",
     "build:dev": "npx webpack build --env mode=development",
     "lint:ts": "npx eslint \"**/*.{ts,tsx}\"",
-    "lint:ts-fix": "npx eslint \"**/*.{ts,tsx}\" --fix"
+    "lint:ts-fix": "npx eslint \"**/*.{ts,tsx}\" --fix",
+    "lint:scss": "npx stylelint \"**/*.scss\"",
+    "lint:scss-fix": "npx stylelint \"**/*.scss\" --fix"
   },
   "author": "",
   "license": "ISC",

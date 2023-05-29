@@ -1,21 +1,27 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
   extends: [
     'plugin:react/recommended',
-    'standard-with-typescript'
+    'airbnb',
+    'plugin:i18next/recommended',
   ],
   overrides: [
   ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: ['./tsconfig.json']
   },
   plugins: [
-    'react'
+    'react',
+    '@typescript-eslint',
+    'i18next',
   ],
   rules: {
     'react/jsx-indent': [2, 2],
@@ -24,18 +30,22 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'warn',
     'react/function-component-definition': 'off',
+    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
     indent: [2, 2],
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-unused-vars': 'warn',
+    '@typescript-eslint/no-unused-vars': 'warn',
     'no-shadow': 'off',
+    'no-void': 'off',
     'no-underscore-dangle': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/strict-boolean-expressions': 0
+    '@typescript-eslint/strict-boolean-expressions': 0,
+    'i18next/no-literal-string': ['error', { markupOnly: true }],
   },
   globals: {
-    __IS_DEV__: true
-  }
-}
+    __IS_DEV__: true,
+  },
+};
