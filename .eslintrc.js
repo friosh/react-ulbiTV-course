@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: [
     'plugin:react/recommended',
@@ -44,6 +45,7 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/strict-boolean-expressions': 0,
     'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'max-len': ['warn', { code: 120, tabWidth: 2, ignoreComments: true }],
   },
   globals: {
     __IS_DEV__: true,
