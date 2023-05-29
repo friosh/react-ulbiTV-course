@@ -5,7 +5,6 @@ const AboutPage = () => {
 
   return (
     <div>
-      asdawa
       {t('About page')}
     </div>
   );
