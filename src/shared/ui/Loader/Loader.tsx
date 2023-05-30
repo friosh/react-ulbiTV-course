@@ -7,10 +7,8 @@ interface ILoaderProps {
 
 export const Loader = ({ className }: ILoaderProps) => (
   <div className={classNames('lds-facebook', {}, [className])}>
-    <div className="lds-facebook">
       <div />
       <div />
       <div />
-    </div>
   </div>
 );
