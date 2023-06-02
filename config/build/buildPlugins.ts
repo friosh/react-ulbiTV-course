@@ -20,10 +20,10 @@ export function buildPlugins(options: BuildOptions): webpack.WebpackPluginInstan
   ];
 
   if (options.isDev) {
-    plugins.push(new webpack.HotModuleReplacementPlugin())
+    plugins.push(new webpack.HotModuleReplacementPlugin());
     plugins.push(new BundleAnalyzerPlugin({
       openAnalyzer: false,
-    }))
+    }));
   }
 
   return plugins;
