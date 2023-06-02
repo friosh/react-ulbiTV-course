@@ -2,16 +2,16 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    jest: true
+    jest: true,
   },
   extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended', 'plugin:storybook/recommended', 'plugin:storybook/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: ['react', '@typescript-eslint', 'i18next'],
   rules: {
@@ -22,7 +22,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'warn',
     'react/function-component-definition': 'off',
     'react/jsx-filename-extension': [2, {
-      extensions: ['.js', '.jsx', '.tsx']
+      extensions: ['.js', '.jsx', '.tsx'],
     }],
     indent: [2, 2],
     'import/no-unresolved': 'off',
@@ -34,25 +34,26 @@ module.exports = {
     'no-shadow': 'off',
     'no-void': 'off',
     'no-underscore-dangle': 'off',
+    'no-return-await': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/strict-boolean-expressions': 0,
     'i18next/no-literal-string': ['error', {
       markupOnly: true,
-      ignoreAttribute: ['data-testid', 'to']
+      ignoreAttribute: ['data-testid', 'to'],
     }],
     'max-len': ['warn', {
       code: 120,
       tabWidth: 2,
-      ignoreComments: true
-    }]
+      ignoreComments: true,
+    }],
   },
   globals: {
-    __IS_DEV__: true
+    __IS_DEV__: true,
   },
   overrides: [{
     files: ['**/src/**/*.test.{ts,tsx}'],
     rules: {
-      'i18next/no-literal-string': 'off'
-    }
-  }]
+      'i18next/no-literal-string': 'off',
+    },
+  }],
 };

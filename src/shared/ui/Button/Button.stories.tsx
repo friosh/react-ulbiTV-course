@@ -14,20 +14,20 @@ type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
   args: {
-    children: 'Text'
+    children: 'Text',
   },
 };
 
 export const Clear: Story = {
   args: {
     children: 'Clear',
-    theme: ThemeButton.CLEAR
+    theme: ThemeButton.CLEAR,
   },
 };
 
 export const Outline: Story = {
-    args: {
-      children: 'Outline',
-      theme: ThemeButton.OUTLINE
-    },
-  };
+  args: {
+    children: 'Outline',
+    theme: ThemeButton.OUTLINE,
+  },
+};

@@ -17,7 +17,9 @@ export const Button = (props: IButtonProps) => {
     className, theme, children, ...otherProps
   } = props;
 
-  return <button type="button" className={classNames(cls.Button, {[cls[theme]]: true}, [className])} {...otherProps}>
-    {children}
-  </button>
+  return (
+    <button type="button" className={classNames(cls.Button, { [cls[theme]]: true }, [className])} {...otherProps}>
+      {children}
+    </button>
+  );
 };
