@@ -41,6 +41,7 @@ module.exports = {
       markupOnly: true,
       ignoreAttribute: ['data-testid', 'to'],
     }],
+    'linebreak-style': 0,
     'max-len': ['warn', {
       code: 120,
       tabWidth: 2,
